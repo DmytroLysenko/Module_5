@@ -30,11 +30,11 @@
     <main class="page_main">
       <section class="page_main__slider">
         <div class="container_outer">
-          <img src="img/slider_item_1.jpg" alt="" width="1600" height="600" />
-          <div class="container_inner">
-            <div class="page_main__slider_control">
-              <a href="#" class="page_main__slider_control_right">&lt;</a>
-              <a href="#" class="page_main__slider_control_left">&gt;</a>
+          <img class="page_main__slider_img" src="img/slider_item_1.jpg" alt="" width="1600" height="600" />
+          <div class="page_main__slider_hover"></div>
+            <div class="page_main__slider_control clearfix">
+              <a href="#" class="page_main__slider_control_item page_main__slider_left">&lt;</a>
+              <a href="#" class="page_main__slider_control_item page_main__slider_right">&gt;</a>
             </div>
             <div class="page_main__slider_text">
               <h2 class="page_main__slider_title">Affrodable Paris tours</h2>
@@ -44,7 +44,6 @@
               </p>
             </div>
           </div>
-        </div>
       </section>
       <section class="page_main__collection">
         <div class="container_inner">
@@ -111,9 +110,11 @@
       </section>
     </main>
     <footer class="page_footer">
-      <div class="container_inner">
-        <p>All Rights Reserved &copy; Dokan &mid; Designed <a href="#">I hemenGraph</a></p>
-      </div>
+      <div class="container_outer">
+        <div class="container_inner">
+            <p>All Rights Reserved &copy; Dokan &mid; Designed <a href="#">I hemenGraph</a></p>
+        </div> 
+        </div>
     </footer>
   </body>
 </html>
