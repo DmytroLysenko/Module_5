@@ -130,24 +130,17 @@ body {
   width: 104px;
   height: 104px;
   background-color: rgba(78, 198, 171, 0.55);
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 100px;
-  line-height: 104px;
-  color: rgba(255, 255, 255, 0.55);
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
 .main__slider_left {
   background-image: url("../img/icon/icon_control_left.png");
-  background-repeat: no-repeat;
-  background-position: center;
   float: left;
 }
 .main__slider_right {
   background-image: url("../img/icon/icon_control_right.png");
-  background-repeat: no-repeat;
-  background-position: center;
   float: right;
 }
 
@@ -190,12 +183,12 @@ body {
 /*    COLLECTION     */
 .main__collection {
   background-color: #e9f0fd;
-  padding-bottom: 100px;
+  padding: 110px 0 100px 0;
 }
 /*    COLLECTION TITLE     */
 .main__collection_title {
-  margin: 0;
-  padding: 110px 0 80px 0;
+  margin: 0 0 80px 0;
+  padding: 0;
   font-size: 48px;
   font-weight: 900;
   line-height: 32px;
@@ -226,30 +219,30 @@ body {
   float: left;
   position: relative;
 }
-.main__collection_item:not(:last-of-type) {
+.main__collection_item:not(:nth-of-type(4)) {
   margin-right: 30px;
 }
 .main__collection_item img {
   display: block;
 }
-.main__collection_item > a {
-  display: block;
-  text-decoration: none;
+
+/*    COLLECTION ITEM FOOTER     */
+.main__gallery_item_footer {
   font-size: 18px;
   line-height: 32px;
   font-weight: 900;
-  color: #fff;
   text-transform: uppercase;
-}
-/*    COLLECTION ITEM FOOTER     */
-.main__gallery_item_footer {
   background-color: #323232;
   width: 255px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-
+.main__gallery_item_footer > a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
 .main__collection_item:hover .main__gallery_item_footer {
   background-color: #1abc9c;
 }
@@ -265,7 +258,6 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   float: right;
 }
-
 
 /*    COLLECTION ITEM FOOTER - SELECT     */
 .main__collection_item_select {
@@ -283,6 +275,7 @@ body {
 }
 .main__collection_select_list {
   padding: 0;
+  margin: 0;
   list-style: none;
   width: 170px;
   height: 110px;
@@ -291,54 +284,48 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.main__collection_select_link {
-  height: 50px;
-  border: 1px solid white;
-}
-ul > .main__collection_select_link:hover {
-  background-color: #1abc9c;
-}
-.main__collection_select_list a {
+.main__collection_item_button {
   display: block;
-  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #fff;
+  min-height: 50px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  line-height: 32px;
+  line-height: 48px;
   font-weight: 400;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.main__collection_select_link:not(:last-of-type) {
+.main__collection_item_button:not(:last-of-type) {
   width: 50px;
   margin-bottom: 10px;
   float: left;
 }
-.main__collection_select_link:nth-of-type(-1n + 2) {
+.main__collection_item_button:nth-of-type(-1n + 2) {
   margin-right: 10px;
 }
-.main__collection_select_link:last-of-type {
+.main__collection_item_button:last-of-type {
+  width: 100%;
   clear: both;
 }
-.main__collection_select_link:nth-of-type(1) {
+.main__collection_item_button:nth-of-type(1) {
   background-image: url("../img/icon/icon_1.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
-.main__collection_select_link:nth-of-type(2) {
+.main__collection_item_button:nth-of-type(2) {
   background-image: url("../img/icon/icon_2.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
-.main__collection_select_link:nth-of-type(3) {
+.main__collection_item_button:nth-of-type(3) {
   background-image: url("../img/icon/icon_3.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
-.main__collection_select_link:nth-of-type(4) {
+.main__collection_item_button:nth-of-type(4) {
   background-color: #323232;
 }
-
-.main__collection_select_link_last::before {
+.main__collection_item_button>span::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -346,17 +333,11 @@ ul > .main__collection_select_link:hover {
   background-image: url("../img/icon/icon_4.png");
   background-position: center;
   background-repeat: no-repeat;
+  float: left;
+ }
+.main__collection_item_button:hover {
+  background-color: #1abc9c;
 }
-.main__collection_select_link_last {
-  position: relative;
-}
-.main__collection_select_link_last > a {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-left: 55px;
-}
-
 /*    FOOTER     */
 .footer {
   background-color: #323232;
